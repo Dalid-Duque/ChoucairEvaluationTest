@@ -1,0 +1,40 @@
+package ContactMessage;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class SendContactMessage extends BasePage{
+	
+	By contactLink = By.xpath("//div[@id='contact-link']");
+	By customerLink = By.xpath("//option[contains(text(),'Customer service')]");
+	By emailBox = By.xpath("//input[@id='email']");
+	By orderNumber = By.xpath("//input[@id='id_order']");
+	By messageText = By.xpath("//textarea[@id='message']");
+	By submitButton = By.xpath("//button[@id='submitMessage']");
+	By confirmationMessage = By.xpath("//p[contains(text(),'Your message has been successfully sent to our tea')]");
+	
+	public SendContactMessage(WebDriver driver) {
+		super(driver);
+	}
+	
+	public void SendContactMessageByMail() {
+		
+		click(contactLink);
+		click(customerLink);
+		sendkeys("daliduque@hotmail.com", emailBox);
+		sendkeys("00000", orderNumber);
+		sendkeys("Choucair Testing", messageText);
+		click(submitButton);
+		
+	}
+	
+	public String confirmationSendMessage () throws InterruptedException {
+		
+		Thread.sleep(3000);
+		WebElement message = findElement(confirmationMessage);
+		return getText(confirmationMessage);
+		
+	}
+
+}
