@@ -37,3 +37,8 @@ Adicional se realizo una quinta prueba la cual consistio en ir al sitio WEB, ing
 
 Este es el codigo BuyConfirmation y fue hecho sin estructura POM.
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+Adicional se agrega la sintaxis de como se desarrollaria el codigo implementado Gherkin y Cucumber en el codigo CucumberGherkin
+
