@@ -1,0 +1,36 @@
+package com.choucair;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+public class SignInVerification {
+	
+	private WebDriver driver;
+	SignInUser singInPage;
+
+	@Before
+	public void setUp() throws Exception {
+		
+		singInPage = new SignInUser(driver);
+		driver = singInPage.chromeDriverConection();
+		singInPage.visit("http://automationpractice.com/index.php");
+		
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		
+		//driver.quit();
+	}
+
+	@Test
+	public void test() {
+		singInPage.SignIn();
+		assertTrue(singInPage.sesionMessageDisplayed());
+	}
+
+}
