@@ -1,0 +1,46 @@
+package ItemSearch;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class SearchPage extends BasePage{
+	
+	By SearchTextBox = By.xpath("//input[@id = 'search_query_top']");
+	By SearchButton = By.xpath("//button[@name= 'submit_search']");
+	By ListSelector = By.xpath("//li[@id='list']");
+	By SecondItemSelector = By.xpath("//ul[@class='product_list row list']/li[2]/div/div/div[2]/h5/a");
+	By NameItemConfirmation = By.xpath("//h1[contains(text(),'Dress')]");
+	By addToCartButton = By.xpath("//p[@id = 'add_to_cart']/button");
+	By confirmationMessage = By.xpath("//div[@id='layer_cart']/div[1]/div[1]/h2");
+	
+	public SearchPage(WebDriver driver) {
+		super(driver);
+		
+	}
+	
+	public void SearchItem () throws InterruptedException {
+		
+		sendkeys("Dress", SearchTextBox);
+		click(SearchButton);
+		click(ListSelector);
+		click(SecondItemSelector);
+		
+		if (isDisplayed(NameItemConfirmation)) {
+			
+			click(addToCartButton);
+		}else {
+			System.out.println("El producto no coincede con la busqueda");
+		}
+		
+	}
+	
+	public String addToCartMessage () throws InterruptedException {
+		
+		Thread.sleep(3000);
+		WebElement message = findElement(confirmationMessage);
+		return getText(confirmationMessage);
+	}
+		
+	
+}
