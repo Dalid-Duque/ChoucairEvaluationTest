@@ -1,0 +1,59 @@
+Feature: Registrar exitosamente un usuario en la tienda WEB 
+
+	Scenario: Como usuario quiero registrarme en la tienda de ropa virtual
+
+		Given: Ingreso a la seccion de registrarme
+		And: Digito todos los datos e informacion solicitada
+		When: Cuando finalizo de llenar el formulario doy click en el boton Submit
+		Then: Como usuario quedo registrado exitosamente en la tienda virtual
+
+
+	
+Feature: Confirmacion del registro exitoso en la tienda virtual
+
+	Scenario: Como usuario quiero ingresar a la tienda virtual y verificar que este registrado
+
+		Given: Ingreso a la seccion de iniciar sesion
+		And: Digito mis credenciales de acceso
+		When: Cuando finalizo de ingresar mis credenciales doy click en el boton Sing In
+		Then: Como usuario confirmo que si me encuentro registrado en la tienda virtual
+
+
+
+Feature: Busqueda y adicion al carro de compras de un producto en la tienda
+
+	Scenario: Como usuario quiero buscar un producto y agregarlo al carro de compras
+
+		Given: Ingreso a la seccion de iniciar sesion
+		And: Digito mis credenciales de acceso
+		And: Busco un producto en el buscador de la tienda
+		When: Cuando encuentro el producto deseado lo agrego al carro de compras
+		Then: Confirmo en el carro de compras que esta presente el producto deseado
+
+
+
+Feature: Enviar un mensaje de contacto a la tienda WEB
+
+	Scenario: Como usuario quiero escribir un mensaje de contacto a la tienda WEB
+
+		Given: Ingreso a la seccion de Contact Us
+		And: Digito mi informacion de contacto
+		And: Escribo el mensaje que quiero enviar
+		When: Cuando termino de escribir el mensaje a enviar doy click en el boton Submit
+		Then: Confirmo que el mensaje de contacto fue enviado correctamente
+
+
+Feature: Compra de un producto en el sitio WEB
+
+	Scenario: Como usuario quiero comprar un producto en la tienda WEB
+
+		Given: Ingreso a la seccion de iniciar sesion
+		And: Digito mis credenciales de acceso
+		And: Busco un producto en el buscador de la tienda
+		When: Cuando encuentro el producto deseado lo agrego al carro de compras
+		And: Confirmo en el carro de compras que esta presente el producto deseado
+		Then: Procedo a realizar el pago del producto
+		And: Ingreso la informacion registrada
+		And: Acepto la informacion de envio
+		And: Realizo el pago del producto	
+		Then: Confirmo que el pago se haya realizado exitosamente
