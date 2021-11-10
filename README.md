@@ -30,3 +30,9 @@ El codigo SendContactMessage contiene todos los localizadores y acciones necesar
 
 El codigo ContactMessageTest contiene la prueba en Junit que verifica el correcto envio del mensaje de contacto.
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Adicional se realizo una quinta prueba la cual consistio en ir al sitio WEB, ingresar con un usuario previamente registrado, buscar un producto, agregarlo al carro de compras y realizar el pago, al final se captura, compara e imprime el mensaje esperado de confirmacion de la orden de compra
+
+Este es el codigo BuyConfirmation y fue hecho sin estructura POM.
+
