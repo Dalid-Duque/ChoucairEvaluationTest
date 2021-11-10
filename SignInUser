@@ -1,0 +1,44 @@
+package com.choucair;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class SignInUser extends BasePage{
+	
+	By singInLocator = By.xpath("//a[@class='login']");
+	By emailLocator = By.xpath("//input[@id='email']");
+	By passLocator = By.xpath("//input[@id='passwd']");
+	By buttonSignIn = By.xpath("//button[@id='SubmitLogin']");
+	
+	By sesionInMessage = By.xpath("//h3[contains(text(),'Create an account')]");
+	
+	By registerConfirmation = By.xpath("//p[contains(text(),'Welcome to your account')]");
+	
+	public void SignIn () {
+		
+		click(singInLocator);
+		
+		if (isDisplayed(sesionInMessage)) {
+			sendkeys("daliduque@hotmail.com", emailLocator);
+			sendkeys("123456789", passLocator);
+			click(buttonSignIn);
+		}
+		else {
+			System.out.println("No se encuentra la seccion de inicio de sesion");
+		}
+		
+	}
+	
+	public boolean sesionMessageDisplayed() {
+		
+		return isDisplayed(registerConfirmation);
+	}
+	
+	
+	public SignInUser(WebDriver driver) {
+		super(driver);
+		
+	}
+
+	
+}
