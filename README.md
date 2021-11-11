@@ -5,7 +5,7 @@ Ecommerce WebSite Automation Test
 En este repositorio encontrara todos los codigos en arquitectura POM, contando con una Base Page, las clases Page y las clases Test.
 Se Implemento Maven como gestor de dependecias.
 
-El codigo BasePage se implemento para todas las pruebas de automatizacion, en este se declaraon las acciones de Selenium necesarias para las pruebas.
+El codigo BasePage se implemento para todas las pruebas de automatizacion, en este se declararon las acciones de Selenium necesarias para las pruebas.
 
 - En la primera prueba se realiza el registro de un usurio en la plataforma WEB:
 
