@@ -1,4 +1,4 @@
-# ChoucairEvaluationTest - Puesto de Analista en formacion
+# ChoucairEvaluationTest 
 # Dalid Duque Franco
 Ecommerce WebSite Automation Test
 
