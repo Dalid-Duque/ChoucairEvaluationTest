@@ -25,7 +25,7 @@ El codigo ItemSearchPage contiene todos los localizadores y acciones necesarias 
 
 El codigo ItemSearchTest contiene la prueba en Junit que verifica la correcta busqueda y adicion al carro de compras del producto elegido.
 
-- En la cuarta prueba se verifica el correcto funcionamiento de la seccion Contac Us verificando que el mensaje de contacto se envie exitosamente.
+- En la cuarta prueba se verifica el correcto funcionamiento de la seccion Contact Us verificando que el mensaje de contacto se envie exitosamente.
 
 El codigo SendContactMessage contiene todos los localizadores y acciones necesarias para realizar el envio del mensaje de contacto.
 
